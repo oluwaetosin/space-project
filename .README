@@ -1,0 +1,8 @@
+# CENTER TEXT IN A BOX
+
+display: grid;
+place-items: center; (WHEN THERE IS ONLY ONE ITEM INSIDE)
+
+# MAKE A SQUARE BOX
+ display: grid;
+ place-items: center;

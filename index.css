@@ -106,6 +106,7 @@ select {
 .flex {
   display: flex;
   gap: var(--gap, 1rem);
+  flex-direction: var(--direction, row);
 }
 
 .grid {
@@ -315,4 +316,26 @@ select {
 
 .dot-indicators > [aria-selected="true"] {
   background-color: hsl(var(--clr-white) / 1);
+}
+.number-indicators {
+  --direction: column;
+}
+.number-indicators > * {
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+  border: none;
+  cursor: pointer;
+  border: 1px solid hsl(var(--clr-white) / 0.25);
+  background-color: hsl(var(--clr-dark) / 0.25);
+}
+.number-indicators > [aria-selected="true"] {
+  background-color: hsl(var(--clr-white) / 1);
+  color: hsl(var(--clr-dark));
+}
+
+.number-indicators > *:hover,
+.number-indicators > *:focus {
+  background-color: hsl(var(--clr-dark) / 1);
+  border: 1px solid hsl(var(--clr-white) / 1);
 }
